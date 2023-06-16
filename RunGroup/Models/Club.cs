@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RunGroup.Models
 {
-    public class Club
+    public class Club 
     {
         [Key]
         public int Id { get; set; }

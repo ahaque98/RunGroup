@@ -5,7 +5,7 @@ namespace RunGroup.Models
 {
     public class AppUser : IdentityUser
     {        
-        public int? Pace { get; set; }      
+        public int? Pace { get; set; }   
         public int? Mileage { get; set; }
          
         [ForeignKey("AddressId")]

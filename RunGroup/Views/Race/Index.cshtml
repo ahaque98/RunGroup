@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Race>
+
+<main>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                @foreach (var data in Model)
+                {
+                    <div class="col">
+
+                        <div class="card shadow-sm">
+                            <img class="card-image-top" src="@data.Image" alt="Card-Image-Cap" />
+
+                            <div class="card-body">
+                                <p class="card-text">@data.Title</p>
+                                <p class="card-text">@data.Description</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a type="btn btn-success" asp-controller="Race" asp-action="Detail"
+                                           asp-route-id="@data.Id" class="btn btn-sm btn-outline-secondary">View</a>
+                                        <a type="btn btn-success" asp-controller="Race" asp-action="Edit"
+                                           asp-route-id="@data.Id" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    </div>
+                                    <small class="text-muted">@data.RaceCategory</small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+     
+</main>
